@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <header>
+        <h1>Calculadora Científica</h1>
+        <br>
+        <br>
+        <br>
+    <style>
+        /* Estilos generales */
+        body {
+            background: linear-gradient(to bottom, #3e81ee, #b342a4); 
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            position: relative; 
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 150px;
+            height: auto;
+        }
+
+        
+        .contenedor-calculadora {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+        .calculadora {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .calculadora button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #49454a;
+            color: #ededed;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+            transition: all 0.2s ease;
+        }
+
+        
+        .calculadora button:active {
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+            transform: translateY(2px); 
+        }
+
+        .calculadora button:hover {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .resultado {
+            grid-column: span 4;
+            padding: 15px;
+            font-size: 24px;
+            text-align: right;
+            background-color: #333;
+            color: #f3fffd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        
+
+
+        
+        .boton-regresar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #bf84ec;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .boton-regresar:hover {
+            background-color: #a86bd3;
+        }
+    </style>
+</head>
+<body>
+    <img src="IMG_5385.PNG" alt="Logo" class="logo">
+
+    <div class="contenedor-calculadora">
+        <div class="calculadora">
+            <div class="resultado" id="display">0</div>
+            <button onclick="agregarNumero(7)">7</button>
+            <button onclick="agregarNumero(8)">8</button>
+            <button onclick="agregarNumero(9)">9</button>
+            <button onclick="operacion('sumar')">+</button>
+            <button onclick="agregarNumero(4)">4</button>
+            <button onclick="agregarNumero(5)">5</button>
+            <button onclick="agregarNumero(6)">6</button>
+            <button onclick="operacion('restar')">-</button>
+            <button onclick="agregarNumero(1)">1</button>
+            <button onclick="agregarNumero(2)">2</button>
+            <button onclick="agregarNumero(3)">3</button>
+            <button onclick="operacion('multiplicar')">*</button>
+            <button onclick="agregarNumero(0)">0</button>
+            <button onclick="limpiar()">C</button>
+            <button onclick="borrar()">DEL</button> 
+            <button onclick="operacion('dividir')">/</button>
+            <button onclick="funcionCientifica('raizCuadrada')">√</button> 
+            <button onclick="funcionCientifica('seno')">sin</button>
+            <button onclick="funcionCientifica('coseno')">cos</button>
+            <button class="btn-igual" onclick="calcularResultado()">=</button> 
+            <button onclick="funcionCientifica('logaritmo')">log</button>
+        </div>
+        <header>
+            <br>
+            <br>
+            <br>
+            <a href="index.html" class="boton-regresar">Inicio</a>
+        </div>
+    <script src="Java.js"></script>
+</body>
+</html>
